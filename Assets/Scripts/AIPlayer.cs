@@ -8,19 +8,23 @@ public class AIPlayer : MonoBehaviour {
 	PlayerController playerController;
 	MapNavigator mapNavigator;
 	Vector3 destination;
-	bool dead;
+	bool dead = false;
+	bool targeting = false;
+	private PlayerController nearestPlayer = null;
 
 	void Start(){
 		playerController = GetComponent<PlayerController> ();
 		mapNavigator = MapNavigator.instance;
-		dead = false;
 		destination = transform.position;
 		StartCoroutine (MoveToSafePlatform());
 		StartCoroutine (RandomMovement ());
+		StartCoroutine (AlternateTargeting ());
+		StartCoroutine (AttackTarget ());
 	}
 
 	void Update(){
 		MoveToDestination ();
+		AimAtTarget ();
 	}
 
 	private void MoveToDestination(){
@@ -28,6 +32,21 @@ public class AIPlayer : MonoBehaviour {
 		Debug.DrawLine(transform.position, destination, Color.green);
 		Vector3 direction = destination - transform.position;
 		playerController.Move (direction);
+	}
+
+	private void AimAtTarget(){
+		if (targeting) {
+			FindNearestPlayer ();
+			if (nearestPlayer != null) {
+				Vector3 predictedTargetPos = nearestPlayer.transform.position + 10 * nearestPlayer.velocity;
+				Vector3 aimDir = predictedTargetPos - transform.position;
+				playerController.Aim (aimDir);
+				//Debug.DrawLine (transform.position, nearestPlayer.transform.position + 10 * nearestPlayer.velocity, Color.blue);
+				Debug.DrawLine (transform.position, predictedTargetPos, Color.blue);
+			}
+		} else {
+			playerController.Aim (Vector3.zero);
+		}
 	}
 
 	private float SqrDistToNearestSafePlatform(){
@@ -41,6 +60,40 @@ public class AIPlayer : MonoBehaviour {
 			destination = mapNavigator.RandomPositionOnPlatform (destinationPlatform.transform.position);
 		} else {
 			destination = mapNavigator.RandomPositionOnPlatform(transform.position);
+		}
+	}
+
+	private void FindNearestPlayer(){
+		float closestSqrDist = float.MaxValue;
+		PlayerController closestPlayer = null;
+		foreach (PlayerController pc in GameRoundManager.instance.players) {
+			if (pc != null && pc.playerNum != playerController.playerNum) {
+				if ((transform.position - pc.transform.position).sqrMagnitude < closestSqrDist) {
+					closestSqrDist = (transform.position - pc.transform.position).sqrMagnitude;
+					closestPlayer = pc;
+				}
+			}
+		}
+		nearestPlayer = closestPlayer;
+	}
+
+	IEnumerator AlternateTargeting(){
+		float refreshRate = .2f;
+		while (!dead) {
+			refreshRate = targeting?Random.Range(1f, 4f):Random.Range(0.4f, 2f);
+			targeting = !targeting;
+			yield return new WaitForSeconds (refreshRate);
+		}
+	}
+
+	IEnumerator AttackTarget(){
+		float refreshRate = .2f;
+		while (!dead) {
+			if (targeting && nearestPlayer != null && playerController.stamina/playerController.maxStamina > Random.Range(0f, 0.3f)){
+				playerController.Attack();
+			}
+			refreshRate = Random.Range (0.1f, 1f);
+			yield return new WaitForSeconds (refreshRate);
 		}
 	}
 

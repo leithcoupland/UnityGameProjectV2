@@ -34,6 +34,7 @@ public class PlayerController : MonoBehaviour
 
 	Vector3 inputVelocity;
 	Vector3 pushVelocity;
+	public Vector3 velocity { get; private set; }
 	float friction = .05f;
 	float squaredFrictionThreshold = .01f;
 
@@ -57,7 +58,7 @@ public class PlayerController : MonoBehaviour
 	}
 
 	void FixedUpdate(){
-		Vector3 velocity = (inputVelocity + pushVelocity) * Time.fixedDeltaTime;
+		velocity = (inputVelocity + pushVelocity) * Time.fixedDeltaTime;
 		rigidBody.MovePosition (rigidBody.position + velocity);
 		VerticalCollisions ();
 		pushVelocity = pushVelocity * (1 / (friction+1));

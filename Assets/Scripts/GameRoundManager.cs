@@ -18,6 +18,7 @@ public class GameRoundManager : MonoBehaviour {
 
 	public static GameRoundManager instance;
 
+	public PlayerController[] players;
 	public GameObject scoreScreen;
 	public GameObject[] playerScoreEntries;
 	public GameObject roundCountdownText;
