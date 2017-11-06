@@ -18,6 +18,7 @@ public class AIPlayer : MonoBehaviour {
 		destination = transform.position;
 		StartCoroutine (MoveToSafePlatform());
 		StartCoroutine (RandomMovement ());
+		StartCoroutine (TrackClosestPlayer ());
 		StartCoroutine (AlternateTargeting ());
 		StartCoroutine (AttackTarget ());
 	}
@@ -36,7 +37,7 @@ public class AIPlayer : MonoBehaviour {
 
 	private void AimAtTarget(){
 		if (targeting) {
-			FindNearestPlayer ();
+			//FindNearestPlayer ();
 			if (nearestPlayer != null) {
 				Vector3 predictedTargetPos = nearestPlayer.transform.position + 10 * nearestPlayer.velocity;
 				Vector3 aimDir = predictedTargetPos - transform.position;
@@ -93,6 +94,14 @@ public class AIPlayer : MonoBehaviour {
 				playerController.Attack();
 			}
 			refreshRate = Random.Range (0.1f, 1f);
+			yield return new WaitForSeconds (refreshRate);
+		}
+	}
+
+	IEnumerator TrackClosestPlayer(){
+		float refreshRate = .2f;
+		while (!dead) {
+			FindNearestPlayer ();
 			yield return new WaitForSeconds (refreshRate);
 		}
 	}

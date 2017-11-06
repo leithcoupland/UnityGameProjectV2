@@ -38,6 +38,8 @@ public class Projectile : MonoBehaviour{
 			player.Damage (damage, playerNum);
 			player.Push (dir * force, playerNum);
             Destroy(gameObject);
-        }
+		} else if (_col.gameObject.tag == "Obstacle" || _col.gameObject.tag == "Fireball"){
+			Destroy(gameObject);
+		}
     }
 }
