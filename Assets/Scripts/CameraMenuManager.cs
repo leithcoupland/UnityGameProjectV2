@@ -10,8 +10,10 @@ public class CameraMenuManager : MonoBehaviour {
     public float speedCam;
     public Slider[] volumeSliders;
 
-
-
+    public InputField player1;
+    public InputField player2;
+    public InputField player3;
+    public InputField player4;
     //Initialise all sliders
     void Start () {
         volumeSliders[0].value = AudioManager.instance.masterVolumePercent;
@@ -34,6 +36,10 @@ public class CameraMenuManager : MonoBehaviour {
     //Load next screen where the game is played
     public void Play()
     {
+        PlayerPrefs.SetString("Player1Name", player1.text);
+        PlayerPrefs.SetString("Player2Name", player2.text);
+        PlayerPrefs.SetString("Player3Name", player3.text);
+        PlayerPrefs.SetString("Player4Name", player4.text);
         SceneManager.LoadScene("Main");
     }
 
