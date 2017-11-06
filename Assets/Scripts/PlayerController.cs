@@ -49,6 +49,7 @@ public class PlayerController : MonoBehaviour
 		stamina = maxStamina;
 		isMoving = false;
 		lastDamagedBy = playerNum;
+		GameRoundManager.instance.AddPlayer (this);
 	}
 
 	void Update(){

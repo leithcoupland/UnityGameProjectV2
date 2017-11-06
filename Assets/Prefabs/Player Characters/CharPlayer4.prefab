@@ -2388,7 +2388,7 @@ MonoBehaviour:
   healthBar: {fileID: 1145447654084160}
   staminaBar: {fileID: 0}
   firingPoint: {fileID: 1920276658054206}
-  projectile: {fileID: 114350766927025810, guid: d13aeb960f0b81546828d0f7279818bd,
+  projectile: {fileID: 114730210582092514, guid: 3654f9777d39a5f4781ee4c92b1656cb,
     type: 2}
   collisionMask:
     serializedVersion: 2
@@ -7406,7 +7406,7 @@ ParticleSystem:
   LightsModule:
     enabled: 1
     ratio: 1
-    light: {fileID: 0}
+    light: {fileID: 108000013609061350, guid: fa35d75604d172d48b7a6b62a07c7dbf, type: 2}
     randomDistribution: 1
     color: 1
     range: 1

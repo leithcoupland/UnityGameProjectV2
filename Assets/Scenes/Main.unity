@@ -1273,7 +1273,7 @@ Prefab:
     - target: {fileID: 114529022879915332, guid: b2cc349ff26b9234d8175aee98b1495a,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2cc349ff26b9234d8175aee98b1495a, type: 2}
@@ -1476,7 +1476,7 @@ Prefab:
     - target: {fileID: 114616596194183642, guid: 2f564e73d2cdd1443a75bcb34386574d,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f564e73d2cdd1443a75bcb34386574d, type: 2}
@@ -4044,12 +4044,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 8
       objectReference: {fileID: 0}
-    - target: {fileID: 198616608512076782, guid: 33f546bd157b4ad4d9153eeba7bd5d6c,
-        type: 2}
-      propertyPath: LightsModule.light
-      value: 
-      objectReference: {fileID: 108000013609061350, guid: fa35d75604d172d48b7a6b62a07c7dbf,
-        type: 2}
     - target: {fileID: 114151113794580968, guid: 33f546bd157b4ad4d9153eeba7bd5d6c,
         type: 2}
       propertyPath: staminaBar
@@ -4586,7 +4580,7 @@ Prefab:
     - target: {fileID: 114529022879915332, guid: b2cc349ff26b9234d8175aee98b1495a,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2cc349ff26b9234d8175aee98b1495a, type: 2}
@@ -4854,7 +4848,7 @@ Prefab:
     - target: {fileID: 114630650011398780, guid: 4d7f788fa41a30a45a7999ed72f8796b,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d7f788fa41a30a45a7999ed72f8796b, type: 2}
@@ -4913,7 +4907,7 @@ Prefab:
     - target: {fileID: 114077080425527974, guid: c1c032ef46a491842b22d5561c159d65,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1c032ef46a491842b22d5561c159d65, type: 2}
@@ -5306,7 +5300,7 @@ Prefab:
     - target: {fileID: 114529022879915332, guid: b2cc349ff26b9234d8175aee98b1495a,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2cc349ff26b9234d8175aee98b1495a, type: 2}
@@ -5700,7 +5694,7 @@ Prefab:
     - target: {fileID: 114630650011398780, guid: 4d7f788fa41a30a45a7999ed72f8796b,
         type: 2}
       propertyPath: expireTime
-      value: 75
+      value: 65
       objectReference: {fileID: 0}
     - target: {fileID: 4664379164344498, guid: 4d7f788fa41a30a45a7999ed72f8796b, type: 2}
       propertyPath: m_LocalScale.y
@@ -6342,7 +6336,7 @@ Prefab:
     - target: {fileID: 114077080425527974, guid: c1c032ef46a491842b22d5561c159d65,
         type: 2}
       propertyPath: expireTime
-      value: 75
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1c032ef46a491842b22d5561c159d65, type: 2}
@@ -7039,7 +7033,7 @@ Prefab:
     - target: {fileID: 114529022879915332, guid: b2cc349ff26b9234d8175aee98b1495a,
         type: 2}
       propertyPath: expireTime
-      value: 75
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2cc349ff26b9234d8175aee98b1495a, type: 2}
@@ -7094,7 +7088,7 @@ Prefab:
     - target: {fileID: 114630650011398780, guid: 4d7f788fa41a30a45a7999ed72f8796b,
         type: 2}
       propertyPath: expireTime
-      value: 75
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4d7f788fa41a30a45a7999ed72f8796b, type: 2}
@@ -7141,7 +7135,7 @@ Prefab:
     - target: {fileID: 114077080425527974, guid: c1c032ef46a491842b22d5561c159d65,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1c032ef46a491842b22d5561c159d65, type: 2}
@@ -7313,7 +7307,7 @@ Prefab:
     - target: {fileID: 114616596194183642, guid: 2f564e73d2cdd1443a75bcb34386574d,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f564e73d2cdd1443a75bcb34386574d, type: 2}
@@ -8603,7 +8597,7 @@ Prefab:
     - target: {fileID: 114529022879915332, guid: b2cc349ff26b9234d8175aee98b1495a,
         type: 2}
       propertyPath: expireTime
-      value: 50
+      value: 45
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2cc349ff26b9234d8175aee98b1495a, type: 2}
@@ -11214,12 +11208,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 9
       objectReference: {fileID: 0}
-    - target: {fileID: 198457718857284110, guid: 65f2c0edc10f97d499c682521c0e52ca,
-        type: 2}
-      propertyPath: LightsModule.light
-      value: 
-      objectReference: {fileID: 108000013609061350, guid: fa35d75604d172d48b7a6b62a07c7dbf,
-        type: 2}
     - target: {fileID: 114142365771312744, guid: 65f2c0edc10f97d499c682521c0e52ca,
         type: 2}
       propertyPath: staminaBar
@@ -11272,12 +11260,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
-    - target: {fileID: 198403608837440130, guid: b7c3b9ebfb525ca4a8d72772e1bd85ed,
-        type: 2}
-      propertyPath: LightsModule.light
-      value: 
-      objectReference: {fileID: 108000013609061350, guid: fa35d75604d172d48b7a6b62a07c7dbf,
-        type: 2}
     - target: {fileID: 114594093193473546, guid: b7c3b9ebfb525ca4a8d72772e1bd85ed,
         type: 2}
       propertyPath: staminaBar
@@ -11649,7 +11631,7 @@ Prefab:
     - target: {fileID: 114077080425527974, guid: c1c032ef46a491842b22d5561c159d65,
         type: 2}
       propertyPath: expireTime
-      value: 75
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1c032ef46a491842b22d5561c159d65, type: 2}
@@ -12545,7 +12527,7 @@ Prefab:
     - target: {fileID: 114529022879915332, guid: b2cc349ff26b9234d8175aee98b1495a,
         type: 2}
       propertyPath: expireTime
-      value: 75
+      value: 65
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2cc349ff26b9234d8175aee98b1495a, type: 2}
@@ -12687,6 +12669,12 @@ Prefab:
       propertyPath: LightsModule.light
       value: 
       objectReference: {fileID: 108000013609061350, guid: fa35d75604d172d48b7a6b62a07c7dbf,
+        type: 2}
+    - target: {fileID: 114567981263228352, guid: f4dbfe0fc5899ff4b8a6738af3d20c9b,
+        type: 2}
+      propertyPath: projectile
+      value: 
+      objectReference: {fileID: 114730210582092514, guid: 3654f9777d39a5f4781ee4c92b1656cb,
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4dbfe0fc5899ff4b8a6738af3d20c9b, type: 2}

@@ -88,7 +88,12 @@ public class GameRoundManager : MonoBehaviour {
 
 	void StartNewRound(){
 		numDeadPlayers = 0;
+		players = new PlayerController[numPlayers];
 		SceneManager.LoadScene ("Main");
+	}
+
+	public void AddPlayer(PlayerController pc){
+		players [pc.playerNum - 1] = pc;
 	}
 
 	public void SetRoundLimit(int _numRounds){

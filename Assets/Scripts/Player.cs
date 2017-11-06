@@ -39,4 +39,5 @@ public class Player : MonoBehaviour {
 			playerController.Attack ();
 		}
 	}
+
 }
