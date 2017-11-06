@@ -67,6 +67,7 @@ public class GameRoundManager : MonoBehaviour {
 		if (roundCountdown >= timeBetweenRounds) {
 			betweenRounds = false;
 			if (roundsPlayed >= numRounds) {
+				roundsPlayed = 0;
 				SceneManager.LoadScene ("Menu");
 			} else {
 				StartNewRound ();
@@ -86,9 +87,13 @@ public class GameRoundManager : MonoBehaviour {
 		}
 	}
 
-	void StartNewRound(){
+	void ResetPlayers(){
 		numDeadPlayers = 0;
 		players = new PlayerController[numPlayers];
+	}
+
+	void StartNewRound(){
+		ResetPlayers ();
 		SceneManager.LoadScene ("Main");
 	}
 

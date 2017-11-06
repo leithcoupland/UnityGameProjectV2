@@ -16,11 +16,11 @@ public class MapNavigator : MonoBehaviour {
 		instance = this;
 		PopulatePlatformArray ();
 		navGraph = new Dictionary<Platform, ArrayList> ();
-		StartCoroutine (MaintainNavGraph ());
+		//StartCoroutine (MaintainNavGraph ());
 	}
 
 	void Start(){
-		
+		UpdateNavGraph ();
 	}
 
 	private void PopulatePlatformArray(){
@@ -124,9 +124,9 @@ public class MapNavigator : MonoBehaviour {
 		return randomPos;
 	}
 
-	IEnumerator MaintainNavGraph(){
+	/*IEnumerator MaintainNavGraph(){
 		float refreshRate = 1f;
 		UpdateNavGraph ();
 		yield return new WaitForSeconds (refreshRate);
-	}
+	}*/
 }
