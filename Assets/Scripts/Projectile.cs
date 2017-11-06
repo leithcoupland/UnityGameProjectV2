@@ -24,7 +24,7 @@ public class Projectile : MonoBehaviour{
     //It is then destroyed after certain time.
     void Update(){
         transform.Translate(Vector3.forward * Time.deltaTime * speed);
-        Destroy(gameObject, 1);
+        Destroy(gameObject, 0.7f);
     }
 
     //If projectile colides then the other object it forced back with the force specified.
