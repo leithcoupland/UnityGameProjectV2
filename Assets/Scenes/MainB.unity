@@ -1078,6 +1078,12 @@ MeshFilter:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 103181556}
   m_Mesh: {fileID: 4300000, guid: 8047fe64bb2ad034db828801e87a3a02, type: 3}
+--- !u!114 &108080136 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114143188025951854, guid: b7c3b9ebfb525ca4a8d72772e1bd85ed,
+    type: 2}
+  m_PrefabInternal: {fileID: 1643466195}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &110928426
 GameObject:
   m_ObjectHideFlags: 0
@@ -4049,6 +4055,15 @@ Prefab:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 977106633}
+    - target: {fileID: 1329988919105718, guid: 33f546bd157b4ad4d9153eeba7bd5d6c, type: 2}
+      propertyPath: m_Name
+      value: PlayerName2
+      objectReference: {fileID: 0}
+    - target: {fileID: 114290015068884130, guid: 33f546bd157b4ad4d9153eeba7bd5d6c,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 33f546bd157b4ad4d9153eeba7bd5d6c, type: 2}
   m_IsPrefabParent: 0
@@ -4185,6 +4200,12 @@ Transform:
   m_Father: {fileID: 900800246}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &601204107 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114035985560956416, guid: 65f2c0edc10f97d499c682521c0e52ca,
+    type: 2}
+  m_PrefabInternal: {fileID: 1616513638}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &601346112
 GameObject:
   m_ObjectHideFlags: 0
@@ -8633,6 +8654,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b2cc349ff26b9234d8175aee98b1495a, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1306804529 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114290015068884130, guid: 33f546bd157b4ad4d9153eeba7bd5d6c,
+    type: 2}
+  m_PrefabInternal: {fileID: 570518569}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1310786790
 GameObject:
   m_ObjectHideFlags: 0
@@ -9660,6 +9687,10 @@ MonoBehaviour:
   player2: {fileID: 915678338}
   player3: {fileID: 897642914}
   player4: {fileID: 2063078202}
+  player1Name: {fileID: 1731742561}
+  player2Name: {fileID: 1306804529}
+  player3Name: {fileID: 601204107}
+  player4Name: {fileID: 108080136}
 --- !u!4 &1397633786
 Transform:
   m_ObjectHideFlags: 0
@@ -11271,6 +11302,15 @@ Prefab:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 62820066}
+    - target: {fileID: 1920361648332534, guid: 65f2c0edc10f97d499c682521c0e52ca, type: 2}
+      propertyPath: m_Name
+      value: PlayerName3
+      objectReference: {fileID: 0}
+    - target: {fileID: 114035985560956416, guid: 65f2c0edc10f97d499c682521c0e52ca,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65f2c0edc10f97d499c682521c0e52ca, type: 2}
   m_IsPrefabParent: 0
@@ -11323,6 +11363,15 @@ Prefab:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 151636791}
+    - target: {fileID: 1946343106013426, guid: b7c3b9ebfb525ca4a8d72772e1bd85ed, type: 2}
+      propertyPath: m_Name
+      value: PlayerName4
+      objectReference: {fileID: 0}
+    - target: {fileID: 114143188025951854, guid: b7c3b9ebfb525ca4a8d72772e1bd85ed,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b7c3b9ebfb525ca4a8d72772e1bd85ed, type: 2}
   m_IsPrefabParent: 0
@@ -11694,6 +11743,12 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c1c032ef46a491842b22d5561c159d65, type: 2}
   m_IsPrefabParent: 0
+--- !u!114 &1731742561 stripped
+MonoBehaviour:
+  m_PrefabParentObject: {fileID: 114186568189585778, guid: f4dbfe0fc5899ff4b8a6738af3d20c9b,
+    type: 2}
+  m_PrefabInternal: {fileID: 1927110630}
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
 --- !u!1 &1746051232
 GameObject:
   m_ObjectHideFlags: 0
@@ -12746,6 +12801,11 @@ Prefab:
       propertyPath: staminaBar
       value: 
       objectReference: {fileID: 1390160753}
+    - target: {fileID: 114186568189585778, guid: f4dbfe0fc5899ff4b8a6738af3d20c9b,
+        type: 2}
+      propertyPath: m_FontData.m_FontSize
+      value: 15
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f4dbfe0fc5899ff4b8a6738af3d20c9b, type: 2}
   m_IsPrefabParent: 0

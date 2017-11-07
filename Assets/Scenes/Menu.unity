@@ -1432,7 +1432,7 @@ GameObject:
   - component: {fileID: 368402268}
   - component: {fileID: 368402267}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Three
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4962,6 +4962,10 @@ MonoBehaviour:
   - {fileID: 1205274394}
   - {fileID: 594686230}
   - {fileID: 594946711}
+  player1: {fileID: 869890142}
+  player2: {fileID: 1967478778}
+  player3: {fileID: 2147428985}
+  player4: {fileID: 1215083401}
 --- !u!124 &1109209696
 Behaviour:
   m_ObjectHideFlags: 0
@@ -6110,7 +6114,7 @@ GameObject:
   - component: {fileID: 1309913833}
   - component: {fileID: 1309913832}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Four
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6254,7 +6258,7 @@ GameObject:
   - component: {fileID: 1321632882}
   - component: {fileID: 1321632881}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Two
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
