@@ -13,3 +13,11 @@ EditorBuildSettings:
     path: Assets/Scenes/Main.unity
   - enabled: 1
     path: Assets/Scenes/ScoreScreen.unity
+  - enabled: 1
+    path: Assets/Scenes/Main2Lanes.unity
+  - enabled: 1
+    path: Assets/Scenes/Main2Pillars.unity
+  - enabled: 1
+    path: Assets/Scenes/Main3Pillars.unity
+  - enabled: 1
+    path: Assets/Scenes/MainRing.unity

@@ -117,7 +117,8 @@ public class GameRoundManager : MonoBehaviour {
 
 	void StartNewRound(){
 		ResetPlayers ();
-		SceneManager.LoadScene ("Main");
+		//SceneManager.LoadScene ("Main");
+		LoadRandomLevel();
 	}
 
 	public void AddPlayer(PlayerController pc){
@@ -189,5 +190,19 @@ public class GameRoundManager : MonoBehaviour {
 			roundCountdownText.GetComponent<Text> ().text = "";
 		}
 	}
-		
+
+	void LoadRandomLevel(){
+		int r = Random.Range(0, 3);
+		switch (r) {
+		case 0:
+			SceneManager.LoadScene ("Main2Pillars");
+			break;
+		case 1:
+			SceneManager.LoadScene ("Main3Pillars");
+			break;
+		case 2:
+			SceneManager.LoadScene ("MainRing");
+			break;
+		}
+	}
 }

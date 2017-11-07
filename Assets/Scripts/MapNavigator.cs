@@ -40,7 +40,7 @@ public class MapNavigator : MonoBehaviour {
 		navGraph.Clear ();
 		for (int i = 0; i < platforms.Length; i++) {
 			for (int j = 0; j < platforms.Length; j++) {
-				if (Connected (platforms [i], platforms [j]) /*&& !platforms [j].expired*/) {
+				if (Connected (platforms [i], platforms [j])) {
 					if (navGraph.ContainsKey (platforms [i])) {
 						navGraph [platforms [i]].Add (platforms [j]);
 					} else {
@@ -105,6 +105,11 @@ public class MapNavigator : MonoBehaviour {
 		return safeConnectedPlatforms;
 	}
 
+	public Platform RandomConnectedSafePlatform(Vector3 position){
+		ArrayList connectedSafePlatforms = ConnectedSafePlatforms (position);
+		return (Platform)connectedSafePlatforms[Random.Range(0, connectedSafePlatforms.Count)];
+	}
+
 	private bool Connected(Platform platA, Platform platB){
 		Vector3 posA = platA.transform.position;
 		Vector3 posB = platB.transform.position;
@@ -118,7 +123,7 @@ public class MapNavigator : MonoBehaviour {
 
 	public Vector3 RandomPositionOnPlatform(Vector3 plat){
 		Vector3 platform = ClosestSafePlatform (plat).transform.position;
-		float variance = platformRadius * 0.9f;
+		float variance = platformRadius * 0.5f;
 		Vector3 randomPos = new Vector3 (platform.x + Random.Range(-variance, variance), platform.y, platform.z + Random.Range(-variance, variance));
 		return randomPos;
 	}

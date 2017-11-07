@@ -26,6 +26,7 @@ public class AIPlayer : MonoBehaviour {
 	void Update(){
 		MoveToDestination ();
 		AimAtTarget ();
+		//Debug.DrawLine (transform.position + 30 * playerController.velocity, transform.position, Color.cyan);
 	}
 
 	private void MoveToDestination(){
@@ -37,7 +38,6 @@ public class AIPlayer : MonoBehaviour {
 
 	private void AimAtTarget(){
 		if (targeting) {
-			//FindNearestPlayer ();
 			if (nearestPlayer != null) {
 				Vector3 predictedTargetPos = nearestPlayer.transform.position + 10 * nearestPlayer.velocity;
 				Vector3 aimDir = predictedTargetPos - transform.position;
@@ -90,7 +90,7 @@ public class AIPlayer : MonoBehaviour {
 	IEnumerator AttackTarget(){
 		float refreshRate = .2f;
 		while (!dead) {
-			if (targeting && nearestPlayer != null && playerController.stamina/playerController.maxStamina > Random.Range(0f, 0.3f)){
+			if (targeting && nearestPlayer != null && playerController.stamina/playerController.maxStamina > Random.Range(0f, 0.2f)){
 				playerController.Attack();
 			}
 			refreshRate = Random.Range (0.1f, 1f);
@@ -125,9 +125,11 @@ public class AIPlayer : MonoBehaviour {
 		Platform oldPlat = mapNavigator.ClosestPlatform(transform.position);
 		while (!dead) {
 			refreshRate = Random.Range (0.2f, 0.6f);
-			if (!mapNavigator.ClosestPlatform (transform.position).expired) {
-				if (mapNavigator.ClosestPlatform (transform.position).transform.position == oldPlat.transform.position) {
-					destination = mapNavigator.RandomPositionOnPlatform (mapNavigator.RandomSafePlatform ().transform.position);
+			Platform closestPlat = mapNavigator.ClosestPlatform (transform.position + 30 * playerController.velocity);
+			if (!closestPlat.expired) {
+				if (closestPlat.transform.position == oldPlat.transform.position) {
+					//destination = mapNavigator.RandomPositionOnPlatform (mapNavigator.RandomSafePlatform ().transform.position);
+					destination = mapNavigator.RandomPositionOnPlatform (mapNavigator.RandomConnectedSafePlatform (closestPlat.transform.position).transform.position);
 				}
 			}
 			oldPlat = mapNavigator.ClosestPlatform(transform.position);
