@@ -9,6 +9,7 @@ public class Projectile : MonoBehaviour{
 	public float force = 4;
 	public float damage = 5;
 	private int playerNum;
+	public GameObject explosion;
 
     //Set player number of projectile to stop it from colliding with its own player.
     public void setPlayerNo(int _playerNum){
@@ -37,8 +38,10 @@ public class Projectile : MonoBehaviour{
             dir = dir.normalized;
 			player.Damage (damage, playerNum);
 			player.Push (dir * force, playerNum);
+			Instantiate (explosion, transform.position, transform.rotation);
             Destroy(gameObject);
 		} else if (_col.gameObject.tag == "Obstacle" || _col.gameObject.tag == "Fireball"){
+			Instantiate (explosion, transform.position, transform.rotation);
 			Destroy(gameObject);
 		}
     }

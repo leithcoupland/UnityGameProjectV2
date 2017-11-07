@@ -10,7 +10,6 @@ public class UIController : MonoBehaviour {
     public GameObject PausedMenu;
     public GameObject ControlMenu;
     public XboxController controller;
-    public GameObject gameOver;
     public GameObject player1;
     public GameObject player2;
     public GameObject player3;
@@ -28,7 +27,6 @@ public class UIController : MonoBehaviour {
         paused = false;
         PausedMenu.SetActive(false);
         ControlMenu.SetActive(false);
-        gameOver.SetActive(false);
 
         string name = PlayerPrefs.GetString("Player1Name").ToUpper();
         if (name == "")
@@ -76,34 +74,27 @@ public class UIController : MonoBehaviour {
     //Pause the game if start button is pressed on controller or if bool is true
     void Update()
     {
-        if (player1 == null && player2 == null && player3 == null && player4 == null)
+        if (XCI.GetButtonDown(XboxButton.Start, controller))
         {
-            gameOver.SetActive(true);
+            paused = !paused;
+            if (paused)
+            {
+                PausedMenu.SetActive(true);
+            }
+
+        }
+        if (paused)
+        {
+
+            Time.timeScale = 0;
         }
         else
         {
-            if (XCI.GetButtonDown(XboxButton.Start, controller))
-            {
-                paused = !paused;
-                if (paused)
-                {
-                    PausedMenu.SetActive(true);
-                }
+            PausedMenu.SetActive(false);
+            ControlMenu.SetActive(false);
+            Time.timeScale = 1;
 
             }
-            if (paused)
-            {
-
-                Time.timeScale = 0;
-            }
-            else
-            {
-                PausedMenu.SetActive(false);
-                ControlMenu.SetActive(false);
-                Time.timeScale = 1;
-
-            }
-        }
     }
 
     //Resume game and start time scale
@@ -122,7 +113,7 @@ public class UIController : MonoBehaviour {
     //Quit and go back to main menu
     public void Quit()
     {
-        SceneManager.LoadScene("Menu");
+		GameRoundManager.instance.QuitAndReset ();
     }
 
     //Unpause game and return.
