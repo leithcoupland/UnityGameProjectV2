@@ -140,6 +140,7 @@ public class GameRoundManager : MonoBehaviour {
 
 	void CheckRoundOver(int killerPlayerNum){
 		if (numDeadPlayers >= numPlayers - 1) {
+			numDeadPlayers = 0;
 			playerStats [killerPlayerNum - 1].score += scorePerWin;
 			Invoke ("EndRound", 3);
 		}
